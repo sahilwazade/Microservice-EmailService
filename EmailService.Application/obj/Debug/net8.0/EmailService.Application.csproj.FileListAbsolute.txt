@@ -1,0 +1,13 @@
+C:\Users\Sahil\source\repos\EmailService\EmailService.Application\bin\Debug\net8.0\EmailService.Application.deps.json
+C:\Users\Sahil\source\repos\EmailService\EmailService.Application\bin\Debug\net8.0\EmailService.Application.dll
+C:\Users\Sahil\source\repos\EmailService\EmailService.Application\bin\Debug\net8.0\EmailService.Application.pdb
+C:\Users\Sahil\source\repos\EmailService\EmailService.Application\obj\Debug\net8.0\EmailService.Application.csproj.AssemblyReference.cache
+C:\Users\Sahil\source\repos\EmailService\EmailService.Application\obj\Debug\net8.0\EmailService.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Sahil\source\repos\EmailService\EmailService.Application\obj\Debug\net8.0\EmailService.Application.AssemblyInfoInputs.cache
+C:\Users\Sahil\source\repos\EmailService\EmailService.Application\obj\Debug\net8.0\EmailService.Application.AssemblyInfo.cs
+C:\Users\Sahil\source\repos\EmailService\EmailService.Application\obj\Debug\net8.0\EmailService.Application.csproj.CoreCompileInputs.cache
+C:\Users\Sahil\source\repos\EmailService\EmailService.Application\obj\Debug\net8.0\EmailService.Application.sourcelink.json
+C:\Users\Sahil\source\repos\EmailService\EmailService.Application\obj\Debug\net8.0\EmailService.Application.dll
+C:\Users\Sahil\source\repos\EmailService\EmailService.Application\obj\Debug\net8.0\refint\EmailService.Application.dll
+C:\Users\Sahil\source\repos\EmailService\EmailService.Application\obj\Debug\net8.0\EmailService.Application.pdb
+C:\Users\Sahil\source\repos\EmailService\EmailService.Application\obj\Debug\net8.0\ref\EmailService.Application.dll

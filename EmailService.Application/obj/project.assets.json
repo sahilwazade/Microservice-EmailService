@@ -52,6 +52,16 @@
         "build": {
           "buildTransitive/net8.0/_._": {}
         }
+      },
+      "EmailService.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/EmailService.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EmailService.Models.dll": {}
+        }
       }
     }
   },
@@ -141,10 +151,16 @@
         "microsoft.extensions.primitives.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "EmailService.Models/1.0.0": {
+      "type": "project",
+      "path": "../EmailService.Models/EmailService.Models.csproj",
+      "msbuildProject": "../EmailService.Models/EmailService.Models.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "EmailService.Models >= 1.0.0",
       "Microsoft.Extensions.Configuration.Abstractions >= 9.0.1",
       "Microsoft.Extensions.DependencyInjection.Abstractions >= 9.0.1"
     ]
@@ -177,7 +193,11 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Sahil\\source\\repos\\EmailService\\EmailService.Models\\EmailService.Models.csproj": {
+              "projectPath": "C:\\Users\\Sahil\\source\\repos\\EmailService\\EmailService.Models\\EmailService.Models.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

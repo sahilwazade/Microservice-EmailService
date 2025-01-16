@@ -5,10 +5,15 @@ C:\Users\Sahil\source\repos\EmailService\EmailService\bin\Debug\net8.0\EmailServ
 C:\Users\Sahil\source\repos\EmailService\EmailService\bin\Debug\net8.0\EmailService.runtimeconfig.json
 C:\Users\Sahil\source\repos\EmailService\EmailService\bin\Debug\net8.0\EmailService.dll
 C:\Users\Sahil\source\repos\EmailService\EmailService\bin\Debug\net8.0\EmailService.pdb
+C:\Users\Sahil\source\repos\EmailService\EmailService\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Sahil\source\repos\EmailService\EmailService\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Sahil\source\repos\EmailService\EmailService\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
 C:\Users\Sahil\source\repos\EmailService\EmailService\bin\Debug\net8.0\Microsoft.OpenApi.dll
 C:\Users\Sahil\source\repos\EmailService\EmailService\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\Sahil\source\repos\EmailService\EmailService\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\Sahil\source\repos\EmailService\EmailService\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Sahil\source\repos\EmailService\EmailService\bin\Debug\net8.0\EmailService.Application.dll
+C:\Users\Sahil\source\repos\EmailService\EmailService\bin\Debug\net8.0\EmailService.Application.pdb
 C:\Users\Sahil\source\repos\EmailService\EmailService\obj\Debug\net8.0\EmailService.csproj.AssemblyReference.cache
 C:\Users\Sahil\source\repos\EmailService\EmailService\obj\Debug\net8.0\EmailService.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Sahil\source\repos\EmailService\EmailService\obj\Debug\net8.0\EmailService.AssemblyInfoInputs.cache
@@ -16,6 +21,7 @@ C:\Users\Sahil\source\repos\EmailService\EmailService\obj\Debug\net8.0\EmailServ
 C:\Users\Sahil\source\repos\EmailService\EmailService\obj\Debug\net8.0\EmailService.csproj.CoreCompileInputs.cache
 C:\Users\Sahil\source\repos\EmailService\EmailService\obj\Debug\net8.0\EmailService.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Sahil\source\repos\EmailService\EmailService\obj\Debug\net8.0\EmailService.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Sahil\source\repos\EmailService\EmailService\obj\Debug\net8.0\EmailService.sourcelink.json
 C:\Users\Sahil\source\repos\EmailService\EmailService\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\Sahil\source\repos\EmailService\EmailService\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\Sahil\source\repos\EmailService\EmailService\obj\Debug\net8.0\staticwebassets\msbuild.EmailService.Microsoft.AspNetCore.StaticWebAssets.props
