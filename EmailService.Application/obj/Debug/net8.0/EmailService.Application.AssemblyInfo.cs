@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EmailService.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+211b6c634d26de6bd09b2d71571890e57a4c5b69")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+841573b52a5e52df8a58abfb240737ccb0ce6681")]
 [assembly: System.Reflection.AssemblyProductAttribute("EmailService.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EmailService.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

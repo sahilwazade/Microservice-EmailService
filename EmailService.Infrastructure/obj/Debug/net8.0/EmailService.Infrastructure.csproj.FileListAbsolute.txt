@@ -11,3 +11,6 @@ C:\Users\Sahil\source\repos\EmailService\EmailService.Infrastructure\obj\Debug\n
 C:\Users\Sahil\source\repos\EmailService\EmailService.Infrastructure\obj\Debug\net8.0\refint\EmailService.Infrastructure.dll
 C:\Users\Sahil\source\repos\EmailService\EmailService.Infrastructure\obj\Debug\net8.0\EmailService.Infrastructure.pdb
 C:\Users\Sahil\source\repos\EmailService\EmailService.Infrastructure\obj\Debug\net8.0\ref\EmailService.Infrastructure.dll
+C:\Users\Sahil\source\repos\EmailService\EmailService.Infrastructure\bin\Debug\net8.0\EmailService.Models.dll
+C:\Users\Sahil\source\repos\EmailService\EmailService.Infrastructure\bin\Debug\net8.0\EmailService.Models.pdb
+C:\Users\Sahil\source\repos\EmailService\EmailService.Infrastructure\obj\Debug\net8.0\EmailSer.34032E8A.Up2Date
