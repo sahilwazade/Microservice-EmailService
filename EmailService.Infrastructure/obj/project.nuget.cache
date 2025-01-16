@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "oKuszDKHAtU=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Sahil\\source\\repos\\EmailService\\EmailService.Infrastructure\\EmailService.Infrastructure.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Sahil\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\9.0.1\\microsoft.extensions.configuration.abstractions.9.0.1.nupkg.sha512",
+    "C:\\Users\\Sahil\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.1\\microsoft.extensions.dependencyinjection.abstractions.9.0.1.nupkg.sha512",
+    "C:\\Users\\Sahil\\.nuget\\packages\\microsoft.extensions.primitives\\9.0.1\\microsoft.extensions.primitives.9.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
