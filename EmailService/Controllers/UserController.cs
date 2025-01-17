@@ -16,7 +16,7 @@ namespace EmailService.Controllers
             _userService = userService;
         }
 
-        [HttpGet("GetProductByIdAndSendEmail")]
+        [HttpPost("GetProductByIdAndSendEmail")]
         public async Task<IActionResult> GetUserByName(GetUserByNameCommand command)
         {
             try
@@ -33,5 +33,7 @@ namespace EmailService.Controllers
                 return StatusCode(500, new ApiResponse<object>(false, $"Internal server error: {ex.Message}", null));
             }
         }
+
+        //Add email related endpoints controllers here ...
     }
 }

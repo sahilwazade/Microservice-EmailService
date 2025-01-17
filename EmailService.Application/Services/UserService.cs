@@ -2,11 +2,6 @@
 using EmailService.Infrastructure.IRepository;
 using EmailService.Infrastructure.Repository;
 using Microsoft.Extensions.Configuration;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EmailService.Application.Services
 {
@@ -31,8 +26,8 @@ namespace EmailService.Application.Services
 
                 var emailCommand = new EmailCommand()
                 {
-                    To = response.employee.Email,
-                    From = _config["MailSettings: From"],
+                    To = result.employee.Email,
+                    From = _config["From"],
                     Subject = "Add your subject.",
                     Body = "",
                     IsHTMLBody = true,
@@ -47,24 +42,24 @@ namespace EmailService.Application.Services
                     var emailSend = _emailService.SendEmail(emailCommand);
                     if (!emailSend.IsSuccess)
                     {
-                        response = new GetUserByNameResponse
+                        return response = new GetUserByNameResponse
                         {
                             IsSuccess = false,
                             Message = $"Error of EmailService: { emailSend.Message }" + $"Error of UserRepository: { result.Message }"
                         };
                     }
 
-                    response = new GetUserByNameResponse
+                    return response = new GetUserByNameResponse
                     {
                         employee = result.employee,
                         IsSuccess = true,
-                        Message = $"{result.Message} and Email Sent successfully to {response.employee.Email}"
+                        Message = $"{result.Message} and Email Sent successfully to {result.employee.Email}"
                     };
                 }
             }
             catch (Exception ex)
             {
-                response = new GetUserByNameResponse
+                return response = new GetUserByNameResponse
                 {
                     IsSuccess = false,
                     Message = $"Error: { ex.Message }"
@@ -72,5 +67,7 @@ namespace EmailService.Application.Services
             }
             return response;
         }
+
+        //Add email related methods logic here ...
     }
 }

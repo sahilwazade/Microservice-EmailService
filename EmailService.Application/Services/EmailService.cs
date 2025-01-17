@@ -9,9 +9,11 @@ namespace EmailService.Application.Services
     public class EmailService : IEmailService
     {
         private readonly IConfiguration _config;
-        public EmailService(IConfiguration config)
+        private readonly MailConfiguration _mailConfiguration;
+        public EmailService(IConfiguration config, MailConfiguration mailConfiguration)
         {
             _config = config;
+            _mailConfiguration = mailConfiguration;
         }
 
         public GenericResponse SendEmail(EmailCommand command)
@@ -65,9 +67,9 @@ namespace EmailService.Application.Services
                 message.AlternateViews.Add(alternate);
             }
 
-            SmtpClient smtpClient = new SmtpClient(_config["MailSettings: Host"], Convert.ToInt32(_config["MailSettings: Port"]));
-            smtpClient.Credentials = new System.Net.NetworkCredential(_config["MailSettings: UserName"], _config["MailSettings: Password"]) ;         
-            smtpClient.EnableSsl = Convert.ToBoolean(_config["MailSettings: EnableSsl"]);
+            SmtpClient smtpClient = new SmtpClient(_mailConfiguration.Host, Convert.ToInt32(_mailConfiguration.Port));
+            smtpClient.Credentials = new System.Net.NetworkCredential(_mailConfiguration.UserName, _mailConfiguration.Password) ;         
+            smtpClient.EnableSsl = Convert.ToBoolean(_mailConfiguration.EnableSsl);
 
             try
             {
