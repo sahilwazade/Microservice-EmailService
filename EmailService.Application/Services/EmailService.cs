@@ -68,7 +68,7 @@ namespace EmailService.Application.Services
             }
 
             SmtpClient smtpClient = new SmtpClient(_mailConfiguration.Host, Convert.ToInt32(_mailConfiguration.Port));
-            smtpClient.Credentials = new System.Net.NetworkCredential(_mailConfiguration.UserName, _mailConfiguration.Password) ;         
+            smtpClient.Credentials = new System.Net.NetworkCredential(_mailConfiguration.UserName, _mailConfiguration.Password);         
             smtpClient.EnableSsl = Convert.ToBoolean(_mailConfiguration.EnableSsl);
 
             try

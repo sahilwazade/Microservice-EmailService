@@ -29,6 +29,7 @@ namespace EmailService.Application.Services
 
                     var placeholders = emailContent.Placeholders.Split(',');
                     var placeholderValues = new Dictionary<string, string>();
+
                     foreach (var placeholder in placeholders)
                     {
                         var trimmedPh = placeholder.Trim();
@@ -41,8 +42,6 @@ namespace EmailService.Application.Services
                             placeholderValues[trimmedPh] = $"{command.FirstName} {command.LastName}";
                         }
                     }
-                    //{ "{{EmpID}}", (result.employee.EmpID).ToString() },
-                    //    { "{{EmpName}}", command.FirstName + " " + command.LastName },
 
                     foreach (var placeholder in placeholderValues)
                     {

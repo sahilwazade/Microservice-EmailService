@@ -1,7 +1,6 @@
 ﻿using EmailService.Application.IServices;
 using EmailService.Infrastructure.Repository;
 using EmailService.Models.Models;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EmailService.Controllers
