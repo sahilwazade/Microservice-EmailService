@@ -23,22 +23,33 @@ namespace EmailService.Application.Services
             try
             {
                 var result = await _userRepository.GetUserByName(command);
-
-                var emailCommand = new EmailCommand()
-                {
-                    To = result.employee.Email,
-                    From = _config["From"],
-                    Subject = "Add your subject.",
-                    Body = "",
-                    IsHTMLBody = true,
-                    HTMLView = "",  //add your html template
-                    AttactmentFileName = "",
-                    CcList = "",
-                    AttachmentFileByteArray = []
-                };
-
                 if (result != null)
                 {
+                    var emailContent = await _userRepository.GetEmailTemplate(EmailTemplateTypes.SendMAilWhenGetsId);
+                    var emailCommand = new EmailCommand()
+                    {
+                        To = result.employee.Email,
+                        From = _config["From"],
+                        Subject = emailContent.Subject,
+                        Body = "",
+                        IsHTMLBody = true,
+                        HTMLView = emailContent.TemplateBody,
+                        AttactmentFileName = "",
+                        CcList = "",
+                        AttachmentFileByteArray = []
+                    };
+
+                    var placeholderValues = new Dictionary<string, string>
+                    {
+                        { "{{EmpID}}", (result.employee.EmpID).ToString() },
+                        { "{{EmpName}}", command.FirstName + " " + command.LastName },
+                    };
+                                
+                    foreach (var placeholder in placeholderValues)
+                    {
+                        emailContent.TemplateBody = emailContent.TemplateBody.Replace(placeholder.Key.ToString(), placeholder.Value);
+                    }
+
                     var emailSend = _emailService.SendEmail(emailCommand);
                     if (!emailSend.IsSuccess)
                     {

@@ -63,5 +63,25 @@ namespace EmailService.Infrastructure.Repository
                 };
             }
         }
+
+        public async Task<EmailTemplate> GetEmailTemplate(EmailTemplateTypes type)
+        {
+            EmailTemplate emailTemplate = null;
+            try
+            {
+                using (IDbConnection db = new SqlConnection(_conString))
+                {
+                    var parameters = new DynamicParameters();
+                    parameters.Add("@TemplateTypeId", (int)type);
+
+                    emailTemplate = db.QuerySingle<EmailTemplate>("GetEmailTemplate", parameters, commandType: CommandType.StoredProcedure);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Error: {ex.Message}");
+            }
+            return emailTemplate;
+        }
     }
 }

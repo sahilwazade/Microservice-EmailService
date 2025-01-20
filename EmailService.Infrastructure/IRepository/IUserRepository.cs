@@ -10,5 +10,6 @@ namespace EmailService.Infrastructure.IRepository
     public interface IUserRepository
     {
         Task<GetUserByNameResponse> GetUserByName(GetUserByNameCommand command);
+        Task<EmailTemplate> GetEmailTemplate(EmailTemplateTypes type);
     }
 }
