@@ -59,7 +59,7 @@ namespace EmailService.Infrastructure.Repository
                 return new GetUserByNameResponse
                 {
                     IsSuccess = false,
-                    Message = $"Error: { ex.Message }"
+                    Message = $"{ ex.Message }"
                 };
             }
         }
@@ -79,7 +79,7 @@ namespace EmailService.Infrastructure.Repository
             }
             catch (Exception ex)
             {
-                throw new Exception($"Error: {ex.Message}");
+                throw new Exception($"{ex.Message}");
             }
             return emailTemplate;
         }

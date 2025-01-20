@@ -26,6 +26,29 @@ namespace EmailService.Application.Services
                 if (result != null)
                 {
                     var emailContent = await _userRepository.GetEmailTemplate(EmailTemplateTypes.SendMAilWhenGetsId);
+
+                    var placeholders = emailContent.Placeholders.Split(',');
+                    var placeholderValues = new Dictionary<string, string>();
+                    foreach (var placeholder in placeholders)
+                    {
+                        var trimmedPh = placeholder.Trim();
+                        if (trimmedPh == "{{EmpID}}")
+                        {
+                            placeholderValues[trimmedPh] = result.employee.EmpID.ToString();
+                        }
+                        if (trimmedPh == "{{EmpName}}")
+                        {
+                            placeholderValues[trimmedPh] = $"{command.FirstName} {command.LastName}";
+                        }
+                    }
+                    //{ "{{EmpID}}", (result.employee.EmpID).ToString() },
+                    //    { "{{EmpName}}", command.FirstName + " " + command.LastName },
+
+                    foreach (var placeholder in placeholderValues)
+                    {
+                        emailContent.TemplateBody = emailContent.TemplateBody.Replace(placeholder.Key.ToString(), placeholder.Value);
+                    }
+
                     var emailCommand = new EmailCommand()
                     {
                         To = result.employee.Email,
@@ -38,17 +61,6 @@ namespace EmailService.Application.Services
                         CcList = "",
                         AttachmentFileByteArray = []
                     };
-
-                    var placeholderValues = new Dictionary<string, string>
-                    {
-                        { "{{EmpID}}", (result.employee.EmpID).ToString() },
-                        { "{{EmpName}}", command.FirstName + " " + command.LastName },
-                    };
-                                
-                    foreach (var placeholder in placeholderValues)
-                    {
-                        emailContent.TemplateBody = emailContent.TemplateBody.Replace(placeholder.Key.ToString(), placeholder.Value);
-                    }
 
                     var emailSend = _emailService.SendEmail(emailCommand);
                     if (!emailSend.IsSuccess)
@@ -64,7 +76,7 @@ namespace EmailService.Application.Services
                     {
                         employee = result.employee,
                         IsSuccess = true,
-                        Message = $"{result.Message} and Email Sent successfully to {result.employee.Email}"
+                        Message = $"{result.Message} and Email Sent successfully to {command.FirstName} {command.LastName}({result.employee.Email})"
                     };
                 }
             }
